@@ -4,6 +4,7 @@ import React, { useState,useEffect } from 'react';
 function App() {
 
   let time = new Date().toLocaleTimeString();
+  const date = new Date().toLocaleDateString();
 
   const [currentTime, setCurrentTime] = useState(time);
 
@@ -20,10 +21,12 @@ function App() {
   });
 
   return (
-    
+    <>
     <div className="clock">
-           <h1> {currentTime}</h1>
+           <h1> {currentTime}</h1>   
+           <h2> {date}</h2>
     </div>
+    </>
   );
 }
 
