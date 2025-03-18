@@ -5,7 +5,7 @@ function App() {
 
   let time = new Date().toLocaleTimeString();
   const date = new Date().toLocaleDateString();
-
+  const day = new Date().toLocaleDateString('en-US', { weekday: 'long' });
   const [currentTime, setCurrentTime] = useState(time);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function App() {
     <>
     <div className="clock">
            <h1> {currentTime}</h1>   
-           <h2> {date}</h2>
+           <h2> {date}, {day}</h2>
     </div>
     </>
   );
